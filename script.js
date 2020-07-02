@@ -1,9 +1,9 @@
-let money = prompt("Ваш бюджет на месяц?", ""),
+let money = +prompt("Ваш бюджет на месяц?", ""),
     time = prompt("Введите дату в формате YYYY-MM-DD", "");
 
 
 appData = {
-    budjet : money,
+    budget : money,
     timeData : time,
     expenses : {},
     optionalExpenses : {},
@@ -18,12 +18,23 @@ for (let i = 0; i < 2; i++) {
         console.log('Done')
         appData.expenses[a] = b;
     } else {
-        console.log('You write something wrong')
         --i;
+        console.log('You write something wrong')
         continue;
+        
     }
     
 }
-appData.moneyPerDay = appData.budjet / 30
+appData.moneyPerDay = appData.budget / 30
 
 alert(`Ежедневный бюджет: ${appData.moneyPerDay}`);
+
+if (appData.moneyPerDay < 100) {
+    console.log("Минимальный уровень достатка")
+} else if (appData.moneyPerDay > 100) {
+    console.log("Средний уровень достатка")
+} else if (appData.moneyPerDay > 2000) {
+    console.log("Высокий уровень достатка")
+} else {
+    console.log("Произошла ошибка")
+}
