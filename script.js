@@ -1,3 +1,5 @@
+// jshint esversion:6
+
 let money,time;
 
 function start() {
@@ -22,7 +24,7 @@ appData = {
         for (let i = 0; i < 2; i++) {
             let a = prompt("Введите обязательную статью расходов в этом месяце", ""),
                 b = prompt("Во сколько обойдется?", "");
-            if (typeof(a) ==='string' && typeof(a) != null && typeof(b) != null && a != '' && b != '' && a.length < 50)  {
+            if (typeof(a) === 'string' && typeof(a) != null && typeof(b) != null && a != '' && b != '' && a.length < 50)  {
                 console.log('Done');
                 appData.expenses[a] = b;
             } else {
@@ -68,8 +70,10 @@ appData = {
     },
 
     chooseIncome: function() {
-        let items = prompt("Что принесет дополнительный доход? (Перечислите через запятую)" , "");
-        appData.income = items.split(', ');
+        for (let i = 0; i < 1; i++) {
+            let items = prompt("Что принесет дополнительный доход? (Перечислите через запятую)" , "");
+                appData.income = items.split(', ');
+            }
         
         for (let i = 0; i < 1; i++) {
             let additional = prompt("Может что то еще? ", "");
@@ -85,10 +89,10 @@ appData = {
 
         appData.income.forEach(function (element, index) {
             alert(`Способы доп. заработка: ${index+1} ${element}`);
-        });     
+        });    
     }
-};
 
-for (let key in appData) {
-    console.log(`Наша программа включает в себя данные: ${appData[key]}`);        
-}
+};
+for (let key in appData){
+    alert(`Наша программа включает в себя данные: ${key}`);
+} 
