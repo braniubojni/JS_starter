@@ -10,7 +10,7 @@ function start() {
     }
 }
 
-start();
+//start();
 
 appData = {
     budget : money,
@@ -93,6 +93,7 @@ appData = {
     }
 
 };
-for (let key in appData){
-    alert(`Наша программа включает в себя данные: ${key}`);
-} 
+
+// for (let key in appData){
+//     alert(`Наша программа включает в себя данные: ${key}`);
+// } 
