@@ -1,0 +1,12 @@
+GIT main commands
+!) from beginning
+	!) git init
+	!) git config --global(local) user.name "example_name"
+	!) git config --global(local) user.email examplemail.com
+!) git add -A	(-A for all) // it is first position of files 
+!) git status	// 4 status
+!) git commit -a -m "example message"(-a 4 all, -m 4 message)// it is second position
+if first time then
+	!) git remote add origin (your created github link)
+if not
+	!) git push -u origin master
