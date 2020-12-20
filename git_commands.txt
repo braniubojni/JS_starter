@@ -9,4 +9,7 @@ GIT main commands
 if first time then
 	!) git remote add origin (your created github link)
 if not
-	!) git push -u origin master
+	!) git push -u origin main
+when you have some trouble with branches use this commands
+!) git pull --rebase origin main
+!) git push origin main
